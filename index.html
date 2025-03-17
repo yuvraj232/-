@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image & Audio Webpage</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 50%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        audio {
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to My Page</h2>
+
+    <!-- Button -->
+    <button onclick="showAndPlay()">Click to Open</button>
+
+    <!-- Image -->
+    <img id="myImage" src="image.jpg" alt="Sample Image">
+    
+    <!-- Audio -->
+    <audio id="myAudio" controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        function showAndPlay() {
+            document.getElementById("myImage").style.display = "block";
+            var audio = document.getElementById("myAudio");
+            audio.style.display = "block";
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
